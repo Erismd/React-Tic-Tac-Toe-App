@@ -10,7 +10,7 @@ export default function Container() {
   const [player1_name, setPlayer1_name] = useState("");
   const [lobby_waiting, setLobby_waiting] = useState(true);
   const [code, setCode] = useState("");
-  const [player_one, setPlayer_one] = useState(false);
+  const [isPlayer_one, setIsPlayer_one] = useState(false);
 
   const [gameState, setGameState] = useState({
     player1_name: "",
@@ -29,13 +29,13 @@ export default function Container() {
       setLobbyView(true);
       setPlayer1_name(name);
       setCode(code);
-      setPlayer_one(true);
+      setIsPlayer_one(true);
     });
 
     socket.on("valid-code", (gameState) => {
       setLobby_waiting(false);
-      setLobbyView(true);
       setLandingView(false);
+      setLobbyView(true);
       setGameState(gameState);
     });
   }, []);
@@ -54,7 +54,7 @@ export default function Container() {
           gamestate={gameState}
           waiting={lobby_waiting}
           code={code}
-          isPlayer_one={player_one} 
+          isPlayer_one={isPlayer_one} 
         />
       ) : (
         <div></div>

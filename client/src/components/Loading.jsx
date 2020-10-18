@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button, Spinner } from "reactstrap";
-import Board from "./Board";
-import Stats from "./Stats";
-import Announcement from "./Announcement";
-import io from "socket.io-client";
+
 
 export default function Loading(props) {
   return (
