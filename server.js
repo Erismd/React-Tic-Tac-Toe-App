@@ -19,7 +19,7 @@ function socketEvens(socket) {
 
     codeToSession = {
       ...codeToSession,
-      [code]: session,
+      [code]: session, 
     };
 
     SocketToSession = {

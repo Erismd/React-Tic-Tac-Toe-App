@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import Landing from "./Landing";
 import socket from "./../Socket/socketport";
 import Lobby from "./Lobby";
+import Loading from "./Loading";
 
 export default function Container() {
   const [landingView, setLandingView] = useState(true);
   const [lobbyView, setLobbyView] = useState(false);
   const [player1_name, setPlayer1_name] = useState("");
-  const [lobby_waiting, setLobby_waiting] = useState("");
+  const [lobby_waiting, setLobby_waiting] = useState(true);
   const [code, setCode] = useState("");
   const [player_one, setPlayer_one] = useState(false);
 
@@ -43,11 +44,17 @@ export default function Container() {
     <div>
       {landingView ? <Landing /> : <div></div>}
       {lobbyView ? (
-        <Lobby
+        // <Lobby
+        //   gamestate={gameState}
+        //   waiting={lobby_waiting}
+        //   code={code}
+        //   isPlayer_one={player_one}
+        // />
+        <Loading
           gamestate={gameState}
           waiting={lobby_waiting}
           code={code}
-          isPlayer_one={player_one}
+          isPlayer_one={player_one} 
         />
       ) : (
         <div></div>
