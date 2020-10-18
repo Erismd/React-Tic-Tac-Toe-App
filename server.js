@@ -13,13 +13,12 @@ let SocketToSession = {};
 function socketEvens(socket) {
   //create session : player1
   socket.on("create-session", (name) => {
-    console.log("!!!!!!!!!!");
     let code = Math.floor(Math.random() * 1000000).toString();
     const session = new Session(name, socket, code);
 
     codeToSession = {
       ...codeToSession,
-      [code]: session, 
+      [code]: session,
     };
 
     SocketToSession = {
@@ -63,18 +62,34 @@ function socketEvens(socket) {
   });
 
   // game functions
-  socket.on("player-move", (index, value) => {});
+  socket.on("player-move", (index, value) => {
+    SocketToSession[socket].PlayerMove(index, value);
+
+    switch (SocketToSession[socket].checkWinner()) {
+      case "player_one":
+        SocketToSession[socket].Broadcast("announcement", "player_one");
+        break;
+      case "player_two":
+        SocketToSession[socket].Broadcast("announcement", "player_two");
+        break;
+      case "tie":
+        SocketToSession[socket].Broadcast("announcement", "tie");
+        break;
+      case "ongoing":
+        break;
+      default:
+        console.log("no switch cases hit");
+    }
+
+    //TODO: check winners before broadcasting
+    SocketToSession[socket].Broadcast(
+      "update",
+      SocketToSession[socket].gameState
+    );
+  });
 }
 
 io.on("connection", socketEvens);
-// io.on("connection", (socket) => {
-//   console.log("a user connected !!");
-// });
-
-// const port = 3000;
-// server.listen(port, () => {
-//   console.log("Server is running on port: " + port);
-// });
 
 const port = process.env.PORT || 8000;
 

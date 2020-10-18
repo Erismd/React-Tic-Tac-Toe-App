@@ -61,7 +61,7 @@ export default function JoinRoom() {
           <p style={{ color: "red" }}>Invalid Session Code</p>
         </motion.div>
       ) : (
-        <></>
+        <div></div>
       )}
     </div>
   );
