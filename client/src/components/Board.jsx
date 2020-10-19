@@ -10,7 +10,7 @@ export default function Board(props) {
           <Panel
             val={value.toString()}
             index={index}
-            gamestate={{ player_one: props.isPlayer_one, ...props.gamestate }}
+            gamestate={{ isPlayer_one: props.isPlayer_one, ...props.gamestate }}
           />
         );
       })}

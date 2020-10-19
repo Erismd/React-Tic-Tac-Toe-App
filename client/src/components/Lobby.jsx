@@ -12,20 +12,16 @@ export default function Lobby(props) {
     socket.on("update", (gamestate) => {
       setGameState(gamestate);
     });
+    setGameState(props.gamestate);
   }, []);
 
   return (
     <div>
       {props.waiting ? (
-        <Loading code={code} />
+        <Loading code={props.code} />
       ) : (
         <Game gamestate={gamestate} isPlayer_one={props.isPlayer_one} />
       )}
     </div>
   );
 }
-
-
-
-
-

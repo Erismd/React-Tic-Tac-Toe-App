@@ -10,7 +10,6 @@ export default function JoinRoom() {
   const [name, setName] = useState("");
   const [invalid, setInvalid] = useState(false);
 
-
   const submitPlayer = () => {
     if (code !== "" && name !== "") {
       socket.emit("join-session", code, name);

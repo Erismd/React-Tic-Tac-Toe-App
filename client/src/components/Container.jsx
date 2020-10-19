@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Landing from "./Landing";
 import socket from "./../Socket/socketport";
 import Lobby from "./Lobby";
-import Loading from "./Loading";
+
 
 export default function Container() {
   const [landingView, setLandingView] = useState(true);
@@ -44,17 +44,11 @@ export default function Container() {
     <div>
       {landingView ? <Landing /> : <div></div>}
       {lobbyView ? (
-        // <Lobby
-        //   gamestate={gameState}
-        //   waiting={lobby_waiting}
-        //   code={code}
-        //   isPlayer_one={player_one}
-        // />
-        <Loading
+        <Lobby
           gamestate={gameState}
           waiting={lobby_waiting}
           code={code}
-          isPlayer_one={isPlayer_one} 
+          isPlayer_one={isPlayer_one}
         />
       ) : (
         <div></div>
@@ -63,15 +57,4 @@ export default function Container() {
   );
 }
 
-// export default class Container extends Component {
-//     constructor(prop){
-//         super(prop);
 
-//         this.state = {
-//             landing: true,
-//             lobby: false,
-//             pl_one_name: "",
-//             lobby_waiting: "",
-//         }
-//     }
-// }

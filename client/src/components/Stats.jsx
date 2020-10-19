@@ -1,6 +1,7 @@
 import React from "react";
 import { Spinner } from "reactstrap";
 import { AnimatePresence, motion } from "framer-motion";
+import "./../"
 
 export default function Stats(props) {
   const centeredStyle = {
@@ -11,11 +12,25 @@ export default function Stats(props) {
 
   const gamestate = props.gamestate;
   const isPlayer_one = props.isPlayer_one;
-  const opponent_name = isPlayer_one ? gamestate.p2_name : gamestate.p1_name;
-  const wins = isPlayer_one ? gamestate.p1_score : gamestate.p2_score;
-  const losses = isPlayer_one ? gamestate.p2_score : gamestate.p1_score;
+  //const opponent_name = isPlayer_one ? gamestate.player2_name : gamestate.player1_name;
+  //const wins = isPlayer_one ? gamestate.player1_score : gamestate.player2_score;
+  //const losses = isPlayer_one ? gamestate.player2_score : gamestate.player1_score;
   const ties = gamestate.ties;
+  let opponent_name;
+  let wins;
+  let losses;
+ 
+  if(isPlayer_one){
+    opponent_name = gamestate.player2_name;
+    wins = gamestate.player1_score;
+    losses = gamestate.player2_score
+  }else{
+    opponent_name = gamestate.player1_name;
+    wins = gamestate.player2_score;
+    losses = gamestate.player1_score;
+  }
 
+  console.log("name: ", opponent_name)
   return (
     <AnimatePresence>
       <motion.div
@@ -33,8 +48,8 @@ export default function Stats(props) {
             className="turn"
             style={{ display: "grid", gridTemplateRows: "1fr 1fr" }}
           >
-            <h5>{opponent_name}'s Turn</h5>
-
+            <h5>Opponent's Turn</h5>
+            
             <div
               style={{
                 display: "flex",

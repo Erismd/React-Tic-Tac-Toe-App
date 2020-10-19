@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button, Modal, ModalHeader, ModalBody, NavLink} from 'reactstrap';
 import CreateSession from './CreateRoom';
-import JoinSession from './JoinRoom';
+import JoinRoom from './JoinRoom';
 import { AnimatePresence,motion } from 'framer-motion';
 
 
@@ -33,7 +33,7 @@ const Landing = () => {
                 <Modal isOpen={modal_join} toggle={join_toggle}>
                     <ModalHeader toggle={join_toggle}></ModalHeader>
                     <ModalBody>
-                        <JoinSession/>
+                        <JoinRoom/>
                     </ModalBody>
                 </Modal>
                 

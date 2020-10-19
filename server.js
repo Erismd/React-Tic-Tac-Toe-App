@@ -10,12 +10,11 @@ const Session = require("./SessionObj").Session;
 let codeToSession = {};
 let SocketToSession = {};
 
-function socketEvens(socket) {
+function socketEvents(socket) {
   //create session : player1
   socket.on("create-session", (name) => {
     let code = Math.floor(Math.random() * 1000000).toString();
     const session = new Session(name, socket, code);
-
     codeToSession = {
       ...codeToSession,
       [code]: session,
@@ -49,7 +48,7 @@ function socketEvens(socket) {
       );
       SocketToSession = {
         ...SocketToSession,
-        [socket]: codeToSession,
+        [socket]: codeToSession[code],
       };
 
       delete codeToSession[code];
@@ -64,7 +63,7 @@ function socketEvens(socket) {
   // game functions
   socket.on("player-move", (index, value) => {
     SocketToSession[socket].PlayerMove(index, value);
-
+      console.log("player,pve")
     switch (SocketToSession[socket].checkWinner()) {
       case "player_one":
         SocketToSession[socket].Broadcast("announcement", "player_one");
@@ -89,7 +88,7 @@ function socketEvens(socket) {
   });
 }
 
-io.on("connection", socketEvens);
+io.on("connection", socketEvents);
 
 const port = process.env.PORT || 8000;
 

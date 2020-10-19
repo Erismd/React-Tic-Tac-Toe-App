@@ -29,11 +29,13 @@ class Session {
   };
 
   PlayerMove = (index, value) => {
+    console.log("move!");
     this.gameState.grid[index] = value;
     this.gameState.player1_turn = !this.gameState.player1_turn;
   };
 
   checkWinner = () => {
+    console.log("checking");
     const grid = this.gameState.grid;
 
     if (grid[0] === grid[1] && grid[1] === grid[2]) {
