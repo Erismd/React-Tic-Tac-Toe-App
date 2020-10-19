@@ -36,7 +36,7 @@ Features:
 
 
 ### Built With
-* [JavaScript](https://reactjs.org/)
+* [React](https://reactjs.org/)
 * [Express](https://expressjs.com/)
 * [Socket.IO](https://socket.io/)
 
