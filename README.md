@@ -87,7 +87,7 @@ yarn client
   </tr>
     <tr>
     <td><h3>3. Share the roomcode with oppnent and wait for joining the room.</h3></td>
-     <td><h3>4. Player2: After click "Join Session" add your username and roomcode</h3></td>
+     <td><h3>4. Player2: After clicking "Join Session" add your username and roomcode</h3></td>
   </tr>
     <tr>
     <td><img src="./Screenshots/roomcode.png" alt="landing" width="400" height="680" hspace="20"></td>
