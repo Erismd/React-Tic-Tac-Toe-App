@@ -5,7 +5,7 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const path = require("path");
 
-const Session = require("./SessionObj").Session;
+const Session = require("./sessionObj").Session;
 
 let codeToSession = {};
 let SocketToSession = {};
