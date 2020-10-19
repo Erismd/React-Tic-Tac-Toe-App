@@ -1,14 +1,15 @@
 {
   "name": "my-tic-tac-toe-app",
   "version": "1.0.0",
-  "description": "Full Stack web-app where any two people on the web can challenge each other to a classic game of tic-tac-toe.",
+  "description": "Tic-tac-toe game two people can play on their phones and computers separatedly!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "cd client && yarn build"
   },
   "author": "eri shimada",
   "license": "MIT",
