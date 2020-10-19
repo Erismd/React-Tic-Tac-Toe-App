@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
 
 * {
   background-color: #ff9a00;
@@ -26,7 +26,8 @@
 @keyframes rotation {
   from {
     transform: rotate(0deg);
-  }to{
+  }
+  to {
     transform: rotate(359deg);
   }
 }
@@ -34,7 +35,7 @@
 .title {
   font-weight: 800;
   color: #881ee4;
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
 }
 
 .session-btn {
@@ -100,7 +101,7 @@
   display: grid;
   grid-template-rows: 1fr 2fr;
   height: 100%;
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
 }
 
 .board {
@@ -119,14 +120,13 @@
 }
 
 .square-inner {
-  color: black;
+  color: #881ee4;
   background-color: white;
   align-items: center;
   justify-content: center;
   display: flex;
   font-size: 13vw;
   border: 0.5vw solid rgb(0, 0, 0);
-
   transition: 0.3s;
   height: 24vw;
   width: 24vw;
@@ -175,7 +175,7 @@ div {
   }
 
   .square-inner {
-    color: black;
+    color: #881ee4;
     background-color: white;
     align-items: center;
     justify-content: center;
