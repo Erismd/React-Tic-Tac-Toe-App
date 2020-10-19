@@ -10,10 +10,12 @@
 <br />
 <p align="center">
 
-  <h3 align="center">🎃 Tic Tac Toe Game - Halloween edition 🎃</h3>
+  <h2 align="center">🎃 Tic Tac Toe Game - Halloween edition 🎃</h2>
 
   <p align="center">
-    Play tic tac toe with your friend!! 
+    Welcome!👋 
+  <br />
+    Let's play Tic Tac Toe with your friend!! 
     <br />
     <br />
     <a href="https://react-tic-tac-toe-app-eri.herokuapp.com/">Demo of App on Heroku</a>
@@ -25,9 +27,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+This is a Tic Tac Toe app where two people on the web or mobile can compete each other to a classic game of tic-tac-toe. Since this is a Halloween seasion the app is a special Halloween version! 
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -40,10 +40,9 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
+* [JavaScript](https://reactjs.org/)
+* [Express](https://expressjs.com/)
+* [Socket.IO](https://socket.io/)
 
 
 <!-- GETTING STARTED -->
