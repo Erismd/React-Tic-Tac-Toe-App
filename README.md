@@ -1,24 +1,16 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
 
-  <h2 align="center">🎃 Tic Tac Toe Game - Halloween edition 🎃</h2>
+  <h1 align="center">🎃 Tic Tac Toe Game - Halloween edition 🎃</h1>
 
   <p align="center">
-    Welcome!👋 
+    Welcome! 
   <br />
     Let's play Tic Tac Toe with your friend!! 
     <br />
     <br />
-    <a href="https://react-tic-tac-toe-app-eri.herokuapp.com/">Demo of App on Heroku</a>
+    <a href="https://react-tic-tac-toe-app-eri.herokuapp.com/">👉 Demo of App on Heroku</a>
   </p>
 </p>
 
@@ -27,66 +19,85 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a Tic Tac Toe app where two people on the web or mobile can compete each other to a classic game of tic-tac-toe. Since this is a Halloween seasion the app is a special Halloween version! 
+This is a Tic Tac Toe app where two people on the web or mobile can compete each other to a classic game of tic-tac-toe. Since this is a Halloween seasion the app is a special Halloween edition! 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+<br />
+<p float="left">
+<img src="./Screenshots/landing.png" alt="landing" width="400" height="680">
+<img src="./Screenshots/gamepage.png" alt="game" width="400" height="680">
+</p>
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Features:
+* Web and mobile friendly
+* You can add a friend to the game room
+* You can see how many times you won or lost
+
+
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [JavaScript](https://reactjs.org/)
 * [Express](https://expressjs.com/)
 * [Socket.IO](https://socket.io/)
 
 
-<!-- GETTING STARTED -->
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Let's get ready to play Tic Tac Toe! 
 
-### Prerequisites
+### Tested environment: 
+- macOS 10.15.5 
+- iOS 14
+- Heroku(node)
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
+2. Install Yarn packages
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+yarn install
 ```
-3. Install NPM packages
+2. Install dependencies.
 ```sh
-npm install
+yarn 
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+3. Start the server
+```sh
+yarn server
+```
+4. Start the react server
+```sh
+yarn client
 ```
 
 
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<table>
+  <tr>
+    <td><h3>1. Player1: click the "Create Session" button.</h3></td>
+     <td><h3>2. Enter your username.</h3></td>
+  </tr>
+  <tr>
+    <td><img src="./Screenshots/landing.png" alt="landing" width="400" height="680" hspace="20"></td>
+    <td><img src="./Screenshots/createroom.png" alt="landing" width="400" height="680" hspace="20"></td>
+  </tr>
+    <tr>
+    <td><h3>3. Share the roomcode with oppnent and wait for joining the room.</h3></td>
+     <td><h3>4. Player2: After click "Join Session" add your username and roomcode</h3></td>
+  </tr>
+    <tr>
+    <td><img src="./Screenshots/roomcode.png" alt="landing" width="400" height="680" hspace="20"></td>
+    <td><img src="./Screenshots/joinroom.png" alt="landing" width="400" height="680" hspace="20"></td>
+  </tr>
+ </table>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<br />
+<br />
 
-
-
-
-
+<h2>Enjoy!👻</h2>
 
 
