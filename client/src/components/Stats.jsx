@@ -2,6 +2,7 @@ import React from "react";
 import { Spinner } from "reactstrap";
 import { AnimatePresence, motion } from "framer-motion";
 import "./../"
+import pumpkin from './../assets/pumpkin.png'
 
 export default function Stats(props) {
   const centeredStyle = {
@@ -57,7 +58,7 @@ export default function Stats(props) {
                 justifyContent: "center",
               }}
             >
-              <Spinner color="dark"></Spinner>
+              <img className= "pumpkin-img" src={pumpkin} alt=""/>
             </div>
           </div>
         )}

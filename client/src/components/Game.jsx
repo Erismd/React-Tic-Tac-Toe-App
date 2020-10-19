@@ -88,7 +88,7 @@ export default function Game(props) {
               isPlayer_one={props.isPlayer_one}
             />
           </div>
-          <div className="states-container">
+          <div className="stats-container">
             {announce ? <Announcement>{message}</Announcement> :
             <Stats
               gamestate={props.gamestate}

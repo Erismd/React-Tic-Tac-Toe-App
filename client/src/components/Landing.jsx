@@ -17,9 +17,9 @@ const Landing = () => {
     return (
         <AnimatePresence>
         <motion.div className="landing" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
-            <h1 className="title">Tic Tac Toe</h1>
+            <h1 className="title">🎃Tic Tac Toe🎃</h1>
             
-                <Button className="session-btn" color="primary" size="md" onClick={create_toggle} >Create Session</Button>
+                <Button className="session-btn" color="dark" size="md" onClick={create_toggle} >Create Session</Button>
                 <Modal isOpen={modal_create} toggle={create_toggle}>
                     <ModalHeader toggle={create_toggle}></ModalHeader>
                     <ModalBody>
@@ -29,7 +29,7 @@ const Landing = () => {
                     
             
             
-                <Button className="session-btn" color="primary" size="md" onClick={join_toggle}>Join Session</Button>
+                <Button className="session-btn" color="dark" size="md" onClick={join_toggle}>Join Session</Button>
                 <Modal isOpen={modal_join} toggle={join_toggle}>
                     <ModalHeader toggle={join_toggle}></ModalHeader>
                     <ModalBody>

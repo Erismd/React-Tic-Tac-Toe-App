@@ -47,7 +47,7 @@ export default function JoinRoom() {
           submitPlayer();
         }}
         className="session-btn"
-        color="primary"
+        color="dark"
       >
         Join Session
       </Button>

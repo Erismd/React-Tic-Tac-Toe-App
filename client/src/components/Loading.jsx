@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button, Spinner } from "reactstrap";
+import pumpkin from './../assets/pumpkin.png'
 
 
 export default function Loading(props) {
@@ -13,7 +14,7 @@ export default function Loading(props) {
         exit={{ opacity: 0 }}
       >
         <h5>Waiting for someone to join</h5>
-        <Spinner color="dark"></Spinner>
+        <img className= "pumpkin-img" src={pumpkin} alt=""/>
         <h6>Click to Copy Room Code: </h6>
         <Button
           onClick={() => {

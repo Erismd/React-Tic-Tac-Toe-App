@@ -23,7 +23,7 @@ export default function CreateRoom() {
           }}
         ></Input>
       </InputGroup>
-      <Button className="session-btn" color="primary" onClick={createSession}>
+      <Button className="session-btn" color="dark" onClick={createSession}>
         Create room & Join!
       </Button>
     </div>
