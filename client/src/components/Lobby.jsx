@@ -4,8 +4,6 @@ import Loading from "./Loading";
 import Game from "./Game";
 
 export default function Lobby(props) {
-  const [isPlayer_one, setIsPlayer_one] = useState(props.isPlayer_one);
-  const [code, setCode] = useState(props.code);
   const [gamestate, setGameState] = useState(props.gamestate);
 
   useEffect(() => {

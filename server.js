@@ -1,5 +1,4 @@
 const express = require("express");
-// const { Session } = require("inspector");
 const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
@@ -63,7 +62,6 @@ function socketEvents(socket) {
   // game functions
   socket.on("player-move", (index, value) => {
     SocketToSession[socket].PlayerMove(index, value);
-      console.log("player,pve")
     switch (SocketToSession[socket].checkWinner()) {
       case "player_one":
         SocketToSession[socket].Broadcast("announcement", "player_one");
@@ -77,7 +75,6 @@ function socketEvents(socket) {
       case "ongoing":
         break;
       default:
-        console.log("no switch cases hit");
     }
 
     //TODO: check winners before broadcasting

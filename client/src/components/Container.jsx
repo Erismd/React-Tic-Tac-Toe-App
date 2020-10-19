@@ -24,7 +24,6 @@ export default function Container() {
 
   useEffect(() => {
     socket.on("session-created", (name, code) => {
-      console.log("session created!!");
       setLandingView(false);
       setLobbyView(true);
       setPlayer1_name(name);

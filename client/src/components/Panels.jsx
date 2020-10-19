@@ -1,25 +1,18 @@
-import React, { useState } from "react";
-import { Button } from "reactstrap";
+import React from "react";
 import socket from "./../Socket/socketport";
 
 export default function Panel(props) {
   const renderValue = (val) => {
     if (val === "1") {
-      return "x";
+      return "X";
     } else if (val === "-1") {
-      return "○";
+      return "◯";
     } else {
       return "";
     }
   };
 
   const playerMove = () => {
-    console.log("clicked btn");
-    console.log(
-      props.gamestate.player1_turn,
-      props.gamestate.isPlayer_one,
-      props.gamestate.grid[props.index]
-    );
     if (
       props.gamestate.player1_turn === props.gamestate.isPlayer_one &&
       props.gamestate.grid[props.index] === 0
